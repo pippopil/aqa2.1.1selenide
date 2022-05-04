@@ -13,8 +13,8 @@ public class TestAppOrder {
     void shouldSubmitRequest() {
         open("http://localhost:9999");
         SelenideElement form = $("form");
-        form.$("[data-test-id=name] input").setValue("Семенов Василий");
-        form.$("[data-test-id=phone] input").setValue("+79637654412");
+        form.$("[data-test-id=name] input").setValue("Ржевский Генадий");
+        form.$("[data-test-id=phone] input").setValue("+79008673290");
         form.$("[data-test-id=agreement]").click();
         form.$("[type='button']").click();
         $("[data-test-id='order-success']").shouldHave(exactText("  Ваша заявка успешно отправлена!" +
